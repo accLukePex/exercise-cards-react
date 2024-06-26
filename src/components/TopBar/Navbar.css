@@ -1,0 +1,80 @@
+nav {
+    background-color: rgb(35, 26, 26);
+}
+
+.container {
+    width: 80%;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.links {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.logo, .log-in-button {
+    width: 20%;
+}
+
+.logo i {
+    color: white;
+    font-size: 23px;
+}
+
+.logo .title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    margin-left: 10px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 45px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+ul li {
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+.log-in-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.log-in-button a {
+    color: #000;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    background-color: #fff;
+}
+
+.log-in-button a:hover {
+    background-color: #c1c1c1;
+}

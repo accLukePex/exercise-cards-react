@@ -1,7 +1,7 @@
 .row {
     display: grid;
     gap: 15px;
-    margin-top: 40px;
+    margin: 40px 0;
 }
 
 /* Media Query Desktop/Tablet/Smartphone */

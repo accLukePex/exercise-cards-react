@@ -1,6 +1,7 @@
 import './App.css';
 import Navbar from './components/TopBar/Navbar';
 import Jumbotron from './components/Jumbotron/Jumbotron';
+import MainComponent from './components/Main/MainComponent';
 
 function App() {
     return (
@@ -10,7 +11,7 @@ function App() {
                 <Jumbotron />
             </header>
             <main>
-
+                <MainComponent />
             </main>
             <footer>
                 

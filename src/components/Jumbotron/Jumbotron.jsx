@@ -1,14 +1,15 @@
 import './Jumbotron.css';
-import jumbotronImage from '../../assets/Jumbotron-image.jpg';
+import Container from '../Container';
+import styles from '../TopBar/Navbar.module.css';
 
 function Jumbotron() {
     return (
         <div className="jumbotron">
-            <img src={jumbotronImage} alt="immagine gatto per il jumbotron inziale" />
-            
-            <div className="main-title">
-                Find Your Perfect Feline Friend: <br /> Adorable Kittens Awaiting <br /> Their Forever Home!
-            </div>
+            <Container className={styles.flex}>
+                <div className="main-title">
+                    Find Your Perfect Feline Friend: <br /> Adorable Kittens Awaiting <br /> Their Forever Home!
+                </div>
+            </Container>
         </div>
     )
 }

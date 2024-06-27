@@ -1,10 +1,12 @@
 import './Navbar.css';
 import Links from './Navlinks';
+import Container from '../Container';
+import styles from './Navbar.module.css';
 
 function Navbar() {
     return (
         <nav>
-            <div className="container">
+            <Container className={styles.flex}>
                 <div className="logo">
                     <i class="fa-solid fa-cat"></i>
                     <span className="title">CATHOUSE</span>
@@ -31,7 +33,7 @@ function Navbar() {
                 <div className="log-in-button">
                     <a href="#">Log In</a>
                 </div>
-            </div>
+            </Container>
         </nav>
     )
 }

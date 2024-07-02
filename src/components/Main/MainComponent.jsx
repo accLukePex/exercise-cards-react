@@ -33,24 +33,20 @@ function MainComponent({ cats: initialCats }) {
   };
 
   return (
-    <div className="main-container">
-      <Container>
-        <div className="content-container">
-          <div className="box-title">
-            <h2>Gatti in vendita a Milano</h2>
-          </div>
-          <div className="box-sub-title">
-            <h3>230 Gatti in vendita a Milano</h3>
-          </div>
-          <Cardlist cats={cats} />
+    <Container>
+      <div className="box-title">
+        <h2>Gatti in vendita a Milano</h2>
+      </div>
+      <div className="box-sub-title">
+        <h3>230 Gatti in vendita a Milano</h3>
+      </div>
+      <Cardlist cats={cats} />
 
-          <div className="load-more-container">
-            {!loadingMore && <LoadMoreButton onClick={loadMoreCards} />}
-            {loadingMore && <Loader />}
-          </div>
-        </div>
-      </Container>
-    </div>
+      <div className="load-more-container">
+        {!loadingMore && <LoadMoreButton onClick={loadMoreCards} />}
+        {loadingMore && <Loader />}
+      </div>
+    </Container>
   );
 }
 

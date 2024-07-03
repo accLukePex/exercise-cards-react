@@ -7,8 +7,8 @@ import MainComponent from "./components/Main/MainComponent";
 import Bottombar from "./components/BottomBar/Bottombar";
 
 function App() {
-  const [loading, setLoading] = useState(true);
   const [cats, setCats] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Simula il caricamento iniziale con un ritardo

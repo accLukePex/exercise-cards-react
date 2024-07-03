@@ -5,7 +5,16 @@ import "./Button.css";
 import Container from "../Container";
 import Cardlist from "./Cardlist/Cardlist";
 
-function MainComponent({ cats: initialCats }) {
+interface Cat {
+  id: string;
+  url: string;
+}
+
+interface MainComponentProps {
+  cats: Cat[];
+}
+
+const MainComponent: React.FC<MainComponentProps> = ({ cats: initialCats }) => {
   const [cats, setCats] = useState(initialCats);
   const [loadingMore, setLoadingMore] = useState(false);
 
@@ -24,7 +33,7 @@ function MainComponent({ cats: initialCats }) {
       });
   };
 
-  const LoadMoreButton = ({ onClick }) => {
+  const LoadMoreButton: React.FC<{ onClick: () => void }> = ({ onClick }) => {
     return (
       <button className="load-more" onClick={onClick}>
         Load More
@@ -48,6 +57,6 @@ function MainComponent({ cats: initialCats }) {
       </div>
     </Container>
   );
-}
+};
 
 export default MainComponent;

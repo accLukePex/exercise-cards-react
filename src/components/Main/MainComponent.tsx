@@ -12,35 +12,15 @@ interface Cat {
 
 interface MainComponentProps {
   cats: Cat[];
+  isLoading?: boolean;
+  loadMoreCards: () => void;
 }
 
-const MainComponent: React.FC<MainComponentProps> = ({ cats: initialCats }) => {
-  const [cats, setCats] = useState(initialCats);
-  const [loadingMore, setLoadingMore] = useState(false);
-
-  const loadMoreCards = () => {
-    setLoadingMore(true);
-    const url = "https://api.thecatapi.com/v1/images/search?limit=10";
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => {
-        setCats((prevCats) => [...prevCats, ...data]);
-        setLoadingMore(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching the cat images:", error);
-        setLoadingMore(false);
-      });
-  };
-
-  const LoadMoreButton: React.FC<{ onClick: () => void }> = ({ onClick }) => {
-    return (
-      <button className="load-more" onClick={onClick}>
-        Load More
-      </button>
-    );
-  };
-
+const MainComponent: React.FC<MainComponentProps> = ({
+  cats,
+  isLoading,
+  loadMoreCards,
+}) => {
   return (
     <Container>
       <div className="box-title">
@@ -52,8 +32,12 @@ const MainComponent: React.FC<MainComponentProps> = ({ cats: initialCats }) => {
       <Cardlist cats={cats} />
 
       <div className="load-more-container">
-        {!loadingMore && <LoadMoreButton onClick={loadMoreCards} />}
-        {loadingMore && <Loader />}
+        {!isLoading && (
+          <button className="load-more" onClick={() => loadMoreCards()}>
+            Load More
+          </button>
+        )}
+        {isLoading && <Loader />}
       </div>
     </Container>
   );

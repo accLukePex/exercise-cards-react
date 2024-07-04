@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Container from "../Container";
 import styles from "./Navbar.module.css";
 
@@ -14,19 +14,39 @@ function Navbar() {
         <div className="links">
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <NavLink
+                to="/about"
+                className={({ isActive }) => (isActive ? "active-link" : "")}
+              >
+                About
+              </NavLink>
             </li>
             <li>
-              <Link to="/gallery">Gallery</Link>
+              <NavLink
+                to="/gallery"
+                className={({ isActive }) => (isActive ? "active-link" : "")}
+              >
+                Gallery
+              </NavLink>
             </li>
             <li>
-              <Link to="/blog">Blog</Link>
+              <NavLink
+                to="/blog"
+                className={({ isActive }) => (isActive ? "active-link" : "")}
+              >
+                Blog
+              </NavLink>
             </li>
             <li>
-              <Link to="/work-with-us">Work with us</Link>
+              <NavLink
+                to="/work-with-us"
+                className={({ isActive }) => (isActive ? "active-link" : "")}
+              >
+                Work with us
+              </NavLink>
             </li>
           </ul>
         </div>

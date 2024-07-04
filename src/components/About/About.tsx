@@ -1,7 +1,15 @@
 import React from "react";
+import Jumbotron from "../Jumbotron/Jumbotron";
 
 const About = () => {
-  return <div>ABOUT PAGE</div>;
+  return (
+    <>
+      <Jumbotron
+        imageUrl="/assets/jumbotron-about.jpg"
+        text="Since 2010, we have been worked hard to helping these felines find a home"
+      />
+    </>
+  );
 };
 
 export default About;

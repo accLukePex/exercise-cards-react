@@ -1,78 +1,80 @@
 nav {
-    background-color: #26282d;
-    padding: 15px 0;
-    display: flex;
-    align-items: center;
+  background-color: #26282d;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
 }
 
 .links {
-    width: 60%;
-    display: flex;
-    justify-content: space-around;
-    height: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
 }
 
-.logo, .log-in-button {
-    width: 20%;
+.logo,
+.log-in-button {
+  width: 20%;
 }
 
 .logo i {
-    color: white;
-    font-size: 23px;
+  color: white;
+  font-size: 23px;
 }
 
 .logo .title {
-    font-size: 18px;
-    font-weight: 500;
-    color: #fff;
-    margin-left: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  margin-left: 10px;
 }
 
 .links ul {
-    display: flex;
-    list-style: none;
-    gap: 45px;
-    margin: 0;
-    padding: 0;
-    height: 100%;
+  display: flex;
+  list-style: none;
+  gap: 45px;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 .links ul li {
-    height: 100%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .links ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    transition: all 0.3 ease;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3 ease;
 }
 
-.links ul li a:hover {
-    text-decoration: underline;
-    color: #e91e63;
-    text-underline-offset: 8px;
+.links ul li a:hover,
+.links ul li a.active-link {
+  text-decoration: underline;
+  color: #e91e63;
+  text-underline-offset: 8px;
 }
 
 .log-in-button {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .log-in-button a {
-    color: #000;
-    font-weight: 500;
-    padding: 8px 18px;
-    border-radius: 20px;
-    text-decoration: none;
-    background-color: #fff;
+  color: #000;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  background-color: #fff;
 }
 
 .log-in-button a:hover {
-    background-color: #e91e63;
-    color: white;
+  background-color: #e91e63;
+  color: white;
 }

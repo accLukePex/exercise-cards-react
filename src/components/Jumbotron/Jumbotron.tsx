@@ -2,17 +2,19 @@ import "./Jumbotron.css";
 import Container from "../Container";
 import styles from "../TopBar/Navbar.module.css";
 
-function Jumbotron() {
+interface JumbotronProps {
+  imageUrl: string;
+  text: string;
+}
+
+const Jumbotron: React.FC<JumbotronProps> = ({ imageUrl, text }) => {
   return (
-    <div className="jumbotron">
+    <div className="jumbotron" style={{ backgroundImage: `url(${imageUrl})` }}>
       <Container classname={styles.flex}>
-        <div className="main-title">
-          Find Your Perfect Feline Friend: <br /> Adorable Kittens Awaiting{" "}
-          <br /> Their Forever Home!
-        </div>
+        <div className="main-title">{text}</div>
       </Container>
     </div>
   );
-}
+};
 
 export default Jumbotron;

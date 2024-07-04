@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Loader from "./components/Main/Loader/Loader";
 import Navbar from "./components/TopBar/Navbar";
-import Jumbotron from "./components/Jumbotron/Jumbotron";
-import MainComponent from "./components/Main/MainComponent";
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
+import Gallery from "./components/Gallery/Gallery";
+import Blog from "./components/Blog/Blog";
+import WorkWithUs from "./components/Work/WorkWithUs";
 import Bottombar from "./components/BottomBar/Bottombar";
 
 function App() {
@@ -34,16 +38,20 @@ function App() {
   if (loading) {
     return <Loader />;
   }
-
   return (
     <div className="app">
       <header>
-        <Navbar />
-        <Jumbotron />
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home initialCats={cats} />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/work-with-us" element={<WorkWithUs />} />
+          </Routes>
+        </Router>
       </header>
-      <main>
-        <MainComponent cats={cats} />
-      </main>
       <footer>
         <Bottombar />
       </footer>

@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import Links from "./Navlinks";
+import { Link } from "react-router-dom";
 import Container from "../Container";
 import styles from "./Navbar.module.css";
 
@@ -14,19 +14,19 @@ function Navbar() {
         <div className="links">
           <ul>
             <li>
-              <Links name="Home" />
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <Links name="About" />
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <Links name="Gallery" />
+              <Link to="/gallery">Gallery</Link>
             </li>
             <li>
-              <Links name="Blog" />
+              <Link to="/blog">Blog</Link>
             </li>
             <li>
-              <Links name="Work with us" />
+              <Link to="/work-with-us">Work with us</Link>
             </li>
           </ul>
         </div>

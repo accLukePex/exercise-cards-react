@@ -1,5 +1,6 @@
 import "./Bottombar.css";
 import Container from "../Container";
+import { NavLink } from "react-router-dom";
 
 function Bottombar() {
   return (
@@ -10,16 +11,16 @@ function Bottombar() {
             <h4>Company</h4>
             <ul>
               <li>
-                <a href="#">About us</a>
+                <NavLink to="about">About us</NavLink>
               </li>
               <li>
-                <a href="#">Our services</a>
+                <NavLink to="gallery">Gallery</NavLink>
               </li>
               <li>
-                <a href="#">Privacy police</a>
+                <NavLink to="blog">Blog</NavLink>
               </li>
               <li>
-                <a href="#">Affiliate program</a>
+                <NavLink to="work-with-us">Work with us</NavLink>
               </li>
             </ul>
           </div>

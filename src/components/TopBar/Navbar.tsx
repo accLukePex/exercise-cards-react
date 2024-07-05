@@ -8,8 +8,10 @@ function Navbar() {
     <nav>
       <Container classname={styles.flex}>
         <div className="logo">
-          <i className="fa-solid fa-cat"></i>
-          <span className="title">CATHOUSE</span>
+          <NavLink to="/">
+            <i className="fa-solid fa-cat"></i>
+            <span className="title">CATHOUSE</span>
+          </NavLink>
         </div>
         <div className="links">
           <ul>

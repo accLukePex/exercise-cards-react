@@ -20,14 +20,6 @@ const MainComponent: React.FC<MainComponentProps> = ({
   isLoading,
   loadMoreCards,
 }) => {
-  const LoadMoreButton: React.FC<{ onClick: () => void }> = ({ onClick }) => {
-    return (
-      <button className="load-more" onClick={onClick}>
-        Load More
-      </button>
-    );
-  };
-
   return (
     <Container>
       <div className="box-title">
@@ -39,7 +31,11 @@ const MainComponent: React.FC<MainComponentProps> = ({
       <Cardlist cats={cats} />
 
       <div className="load-more-container">
-        {!isLoading && <LoadMoreButton onClick={() => loadMoreCards()} />}
+        {!isLoading && (
+          <button className="load-more" onClick={() => loadMoreCards()}>
+            Load More
+          </button>
+        )}
         {isLoading && <Loader />}
       </div>
     </Container>

@@ -2,10 +2,10 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/TopBar/Navbar";
 import Bottombar from "./components/BottomBar/Bottombar";
+import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Blog from "./components/Blog/Blog";
 import Gallery from "./components/Gallery/Gallery";
-import Home from "./components/Home/Home";
 import WorkWithUs from "./components/Work/WorkWithUs";
 
 function App() {

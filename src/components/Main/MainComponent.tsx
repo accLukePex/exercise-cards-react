@@ -3,6 +3,7 @@ import Loader from "./Loader/Loader";
 import "./Button.css";
 import Container from "../Container";
 import Cardlist from "./Cardlist/Cardlist";
+import { Button } from "../../ui/style";
 
 interface Cat {
   id: string;
@@ -32,9 +33,9 @@ const MainComponent: React.FC<MainComponentProps> = ({
 
       <div className="load-more-container">
         {!isLoading && (
-          <button className="load-more" onClick={() => loadMoreCards()}>
+          <Button className="load-more" onClick={() => loadMoreCards()}>
             Load More
-          </button>
+          </Button>
         )}
         {isLoading && <Loader />}
       </div>

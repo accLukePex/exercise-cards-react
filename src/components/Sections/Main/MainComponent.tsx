@@ -1,8 +1,8 @@
 import "./MainComponent.css";
-import Loader from "./Loader/Loader";
+import Loader from "../../../ui/Loader/Loader";
 import "./Button.css";
 import Container from "../../../ui/Container/Container";
-import Cardlist from "./Cardlist/Cardlist";
+import Cardlist from "../../../ui/Cardlist/Cardlist";
 import { Button } from "../../../ui/style";
 
 interface Cat {

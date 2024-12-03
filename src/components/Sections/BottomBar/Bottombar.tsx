@@ -1,5 +1,5 @@
 import "./Bottombar.css";
-import Container from "../Container";
+import Container from "../../../ui/Container/Container";
 import { NavLink } from "react-router-dom";
 
 function Bottombar() {

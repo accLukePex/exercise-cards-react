@@ -1,5 +1,5 @@
 import React from "react";
-import Jumbotron from "../Jumbotron/Jumbotron";
+import Jumbotron from "../../../ui/Jumbotron/Jumbotron";
 
 const About = () => {
   return (

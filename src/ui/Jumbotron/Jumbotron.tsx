@@ -1,6 +1,6 @@
 import "./Jumbotron.css";
-import Container from "../Container";
-import styles from "../TopBar/Navbar.module.css";
+import Container from "../Container/Container";
+import styles from "../../components/Sections/TopBar/Navbar.module.css";
 
 interface JumbotronProps {
   imageUrl: string;

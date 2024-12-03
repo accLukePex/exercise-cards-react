@@ -1,9 +1,9 @@
 import "./MainComponent.css";
 import Loader from "./Loader/Loader";
 import "./Button.css";
-import Container from "../Container";
+import Container from "../../../ui/Container/Container";
 import Cardlist from "./Cardlist/Cardlist";
-import { Button } from "../../ui/style";
+import { Button } from "../../../ui/style";
 
 interface Cat {
   id: string;

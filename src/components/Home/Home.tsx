@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Jumbotron from "../Jumbotron/Jumbotron";
-import MainComponent from "../Main/MainComponent";
+import Jumbotron from "../../ui/Jumbotron/Jumbotron";
+import MainComponent from "../Sections/Main/MainComponent";
 
 const Home: React.FC<{}> = () => {
   const [cats, setCats] = useState<any[]>([]);

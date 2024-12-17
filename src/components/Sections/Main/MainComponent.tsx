@@ -33,7 +33,7 @@ const MainComponent: React.FC<MainComponentProps> = ({
 
       <div className="load-more-container">
         {!isLoading && (
-          <Button className="load-more" onClick={() => loadMoreCards()}>
+          <Button className="load-more" onClick={loadMoreCards}>
             Load More
           </Button>
         )}

@@ -1,26 +1,28 @@
 import "./MainComponent.css";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchCards } from "../../../store/thunkCalls";
+import { AppDispatch, RootState } from "../../../store/store";
 import Loader from "../../../ui/Loader/Loader";
 import "./Button.css";
 import Container from "../../../ui/Container/Container";
 import Cardlist from "../../../ui/Cardlist/Cardlist";
 import { Button } from "../../../ui/style";
 
-interface Cat {
-  id: string;
-  url: string;
-}
+const MainComponent: React.FC = () => {
+  const dispatch = useDispatch<AppDispatch>();
+  const { cards, isLoading } = useSelector((state: RootState) => state.cards);
 
-interface MainComponentProps {
-  cats: Cat[];
-  isLoading?: boolean;
-  loadMoreCards: () => void;
-}
+  useEffect(() => {
+    if (cards.length === 0) {
+      dispatch(fetchCards());
+    }
+  }, [cards, dispatch]);
 
-const MainComponent: React.FC<MainComponentProps> = ({
-  cats,
-  isLoading,
-  loadMoreCards,
-}) => {
+  const loadMoreCards = () => {
+    dispatch(fetchCards());
+  };
+
   return (
     <Container>
       <div className="box-title">
@@ -29,7 +31,7 @@ const MainComponent: React.FC<MainComponentProps> = ({
       <div className="box-sub-title">
         <h3>230 Gatti in vendita a Milano</h3>
       </div>
-      <Cardlist cats={cats} />
+      <Cardlist cats={cards} />
 
       <div className="load-more-container">
         {!isLoading && (
